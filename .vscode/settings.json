@@ -1,0 +1,6 @@
+{
+    "terminal.integrated.fontFamily": "consolas",
+    "git.autorefresh": false,
+    "git.decorations.enabled": true,
+    "git.enabled": false
+}
