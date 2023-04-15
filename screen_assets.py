@@ -9,13 +9,13 @@ class Paddle(Turtle):
         self.color("white") 
         self.shapesize(5, 1)
         self.penup()
+    def righto(self):
+        new_y = self.ycor() + 20
+        self.goto(self.xcor(),new_y)
 
-    def right(self):
-        self.forward(10)
-
-    def left(self):
-
-        self.forward(10)
+    def lefto(self):
+        new_y = self.ycor() - 20
+        self.goto(self.xcor(),new_y)
 
 
 
@@ -28,10 +28,23 @@ class Paddle2(Turtle):
         self.shapesize(5, 1)
         self.penup()
     
-    def right(self):
-        self.forward(10)
+    def righto(self):
+        new_y = self.ycor() + 20
+        self.goto(self.xcor(),new_y)
 
-    def left(self):
-        self.forward(10)
+    def lefto(self):
+        new_y = self.ycor() - 20
+        self.goto(self.xcor(),new_y)
 
 
+class Line(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.setpos(0, 350)
+        self.color("white")
+        self.pensize(6)
+        self.right(90)
+
+        for i in range(45):
+            self.forward(15)
+            self.pendown()
