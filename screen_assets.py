@@ -2,13 +2,14 @@ from turtle import Turtle
 
 
 class Paddle(Turtle):
-    def __init__(self):
+    def __init__(self, position):
         super().__init__()                                                                                                                                                                                                                      
         self.shape("square")
-        self.setpos(350, 0)
+        self.setpos((position))
         self.color("white") 
         self.shapesize(5, 1)
         self.penup()
+
     def righto(self):
         new_y = self.ycor() + 20
         self.goto(self.xcor(),new_y)
@@ -19,22 +20,10 @@ class Paddle(Turtle):
 
 
 
-class Paddle2(Turtle):
-    def __init__(self):
-        super().__init__()                                                                                                                                                                                                                      
-        self.shape("square")
-        self.setpos(-350, 0)
-        self.color("white") 
-        self.shapesize(5, 1)
-        self.penup()
-    
-    def righto(self):
-        new_y = self.ycor() + 20
-        self.goto(self.xcor(),new_y)
 
-    def lefto(self):
-        new_y = self.ycor() - 20
-        self.goto(self.xcor(),new_y)
+class Pong(Turtle):
+    pass
+
 
 
 class Line(Turtle):
