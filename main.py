@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-from screen_assets import Paddle, Line
+from screen_assets import Paddle, Line, Pong
 screen = Screen()
 screen.bgcolor("black")
 screen.title("Pong")
@@ -11,6 +11,7 @@ screen.tracer(0)
 line = Line()
 paddle_right = Paddle((350, 0))
 paddle_left = Paddle((-350, 0))
+ball = Pong()
 
 
 screen.listen()
