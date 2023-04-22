@@ -19,12 +19,6 @@ class Paddle(Turtle):
         self.goto(self.xcor(),new_y)
 
 
-class Pong(Turtle):
-    def __init__(self):
-        super().__init__()
-        self.color("white")
-        self.circle(20)
-
 
 
 class Line(Turtle):
