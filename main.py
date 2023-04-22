@@ -26,7 +26,7 @@ screen.onkey(paddle_left.lefto, "s")
 
 game_on = True
 while game_on:
-    time.sleep(0.1)
+    time.sleep(ball.move_speed)
     screen.update()
     ball.move()
 
@@ -45,15 +45,19 @@ while game_on:
     
     #Detect if ball went out of bound then place it back to the center
     if ball.xcor() > 380:
-        time.sleep(0.1)
         ball.center()
-        scoarboard.l_score += 1
+        scoarboard.l_point()
+        scoarboard.update_score()
+
+
+
     
-    
-    if ball.xcor() > -380:
-        time.sleep(0.1)
+    if ball.xcor() < -380:
         ball.center()
-        scoarboard.r_score += 1
+        scoarboard.r_point()
+        scoarboard.update_score()
+
+
 
 
 
