@@ -19,16 +19,3 @@ class Paddle(Turtle):
         self.goto(self.xcor(),new_y)
 
 
-
-
-class Line(Turtle):
-    def __init__(self):
-        super().__init__()
-        self.setpos(0, 350)
-        self.color("white")
-        self.pensize(6)
-        self.right(90)
-
-        for i in range(45):
-            self.forward(15)
-            self.pendown()
